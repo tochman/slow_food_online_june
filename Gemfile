@@ -12,6 +12,7 @@ gem 'haml-rails', '~> 0.9'
 
 group :development, :test do
   gem 'pry'
+  gem 'coveralls', require: false
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
