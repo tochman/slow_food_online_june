@@ -12,6 +12,14 @@ gem 'haml-rails', '~> 0.9'
 
 group :development, :test do
   gem 'pry'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'launchy'
 end
 
 group :development do
