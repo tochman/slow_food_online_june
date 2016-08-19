@@ -10,13 +10,6 @@
 
 %script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLlFOiBK4ncqm_t4-QPo_-VmhD84MNhHc&libraries=places&callback=initMap" async defer)
 = javascript_include_tag 'gmaps'
+= javascript_include_tag 'landing_page'
 
-:javascript
-  function initMap () {
-    map = GMaps({
-      div: '#map',
-      zoom: 12,
-      lat: 57.7089,
-      lng: 11.9746
-    })
-  };
+
