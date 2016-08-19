@@ -10,6 +10,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'haml-rails', '~> 0.9'
 gem 'foundation-rails'
+gem 'devise'
 
 group :development, :test do
   gem 'pry'
