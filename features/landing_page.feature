@@ -1,3 +1,4 @@
+@javascript
 Feature: As a visitor
   So that I can order some food
   I want to see a selection of restaurants nearby and food categories
