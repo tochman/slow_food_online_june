@@ -1,5 +1,5 @@
-Given(/^I am on the restaurant input details page$/) do
-  visit restaurant_create_path
+Then(/^Show me the page$/) do
+  save_and_open_page
 end
 
 Then(/^I should see the field "([^"]*)"$/) do |content|
@@ -24,4 +24,12 @@ end
 
 Then(/^I should see a "([^"]*)" button$/) do |button|
   expect(page).to have_button button
+end
+
+Then(/^I will fill in "([^"]*)" with "([^"]*)"$/) do |field, value|
+  fill_in field, with: value
+end
+
+Then(/^I click on the "([^"]*)" button$/) do |button|
+  click_link_or_button button
 end
