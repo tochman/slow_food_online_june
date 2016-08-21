@@ -18,6 +18,7 @@ Then(/^I should see all the fields$/) do
    Then I should see the field "Private phone number"
    Then I should see the field "Email address"
    Then I should see the field "Restaurant description"
+   Then I should see the field "Cuisine"
  }
 end
 
