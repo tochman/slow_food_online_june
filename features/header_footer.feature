@@ -7,7 +7,7 @@ Feature: As an Administrator
   Given I am on the "home" page
   Then I should see a "Home" link
   And I should see a "Login" link
-  And I should see a "Sign up" link
+  And I should see a "Sign Up" link
   And I should see "Slow Food Online"
   And I should see "Copyright"
   And I should see a "Site Map" link
