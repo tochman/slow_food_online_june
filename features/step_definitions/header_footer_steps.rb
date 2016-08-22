@@ -2,6 +2,8 @@ Given(/^I am on the "([^"]*)" page$/) do |path|
   case page
     when 'home' then
       visit root_path
+    when 'create menu' then
+      visit menu_index_path
   end
 end
 
