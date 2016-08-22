@@ -18,9 +18,9 @@ private
 
 def expected_page(path)
   case path
-    when "home"
+    when 'home'
       root_path
-    when "signup"
+    when 'signup'
       new_user_registration_path
   end
 end
