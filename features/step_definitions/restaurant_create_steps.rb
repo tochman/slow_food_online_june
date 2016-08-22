@@ -33,3 +33,8 @@ end
 Then(/^I click on the "([^"]*)" button$/) do |button|
   click_link_or_button button
 end
+
+Then(/^the "([^"]*)" drop\-down should contain the option "([^"]*)"$/) do |id, value|
+  find('#Delivery_radius_id').click
+  select('', from: 'Delivery_radius_id' )
+end

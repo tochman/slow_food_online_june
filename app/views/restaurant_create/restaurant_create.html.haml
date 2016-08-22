@@ -7,7 +7,7 @@
     %label{for: 'Zip code'} Zip code
     %input{name: 'Zip code', placeholder: 'Type in your Zip code', type: 'text', required: true}
     %label{for: 'Delivery radius'} Delivery radius
-    %select{name: 'Delivery radius', required: ""}
+    %select#Delivery_radius_id{name: 'Delivery radius', required: ""}
       %option{value: 'Select'}
       %option{value: '5'} 5 km
       %option{value: '10'} 10 km
@@ -26,7 +26,7 @@
     %label{for: 'Restaurant description'} Restaurant description
     %textarea{cols: '25', name: 'Restaurant description', rows: '10', placeholder: 'Type in a brief description of your Restaurant (eg. Open hours, type of restaurant, delivery fee)', required: true}
     %label{for: 'Cuisine'} Select your Cuisine
-    %select{name: 'Cuisine', required: ""}
+    %select#Cusine_id{name: 'Cuisine', required: ""}
       %option{value: 'Select'}
       %option{value: 'italian'} Italian
       %option{value: 'greek'} Greek
