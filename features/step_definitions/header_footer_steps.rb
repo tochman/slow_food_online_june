@@ -1,5 +1,8 @@
 Given(/^I am on the "([^"]*)" page$/) do |path|
-  visit root_path
+  case page
+    when 'home' then
+      visit root_path
+  end
 end
 
 Then(/^I should see a "([^"]*)" link$/) do |link|
