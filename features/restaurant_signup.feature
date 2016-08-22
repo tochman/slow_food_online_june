@@ -33,3 +33,12 @@ Feature: As a restaurant owner
     And I fill in "Password confirmation" with "wrong_password"
     And I click on "Sign up"
     Then I should see "Password confirmation doesn't match Password"
+
+  Scenario: Trying to sign up with existing user
+    Given there is a user with email "admin@admin.com"
+    Given I navigate to the "signup" page
+    And I fill in "Email" with "admin@admin.com"
+    And I fill in "Password" with "password"
+    And I fill in "Password confirmation" with "password"
+    And I click on "Sign up"
+    Then I should see "Email has already been taken"
