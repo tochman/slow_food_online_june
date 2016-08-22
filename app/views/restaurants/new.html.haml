@@ -1,6 +1,5 @@
-
 %div#details
-  = form_for(@restaurant, html: {method: :post}) do |f|
+  = form_for(@restaurant, url: restaurants_path, html: {method: :post}) do |f|
     .field
       = f.label :restaurant_name
       = f.text_field :restaurant_name
@@ -10,7 +9,9 @@
     .field
       = f.label :zip_code
       = f.text_field :zip_code
-    %f.select{:radius_id, @radius_options}
+    .field
+      = f.label :delivery_radius
+      = f.select(:delivery_radius, options_for_select([['5km', 1], ['10km', 2],['20km', 3],['30km', 4]]), include_blank: 'Select radius')
     .field
       = f.label :public_phone_number
       = f.text_field :public_phone_number
@@ -29,6 +30,8 @@
     .field
       = f.label :restaurant_description
       = f.text_area :restaurant_description
-    %f.select{:cuisine_id, @cuisine_options}
+    .field
+      = f.label :select_your_cuisine
+      = f.select(:select_your_cuisine, options_for_select([['Italian', 1],['Greek', 2],['Chinese', 3],['Sushi', 4]]), include_blank: 'Select cuisine')
     .actions
       = f.submit 'Save'

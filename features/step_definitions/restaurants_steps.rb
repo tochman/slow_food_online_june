@@ -18,7 +18,7 @@ Then(/^I should see all the fields$/) do
    Then I should see the field "Private phone number"
    Then I should see the field "Email address"
    Then I should see the field "Restaurant description"
-   Then I should see the field "Select your Cuisine"
+   Then I should see the field "Select your cuisine"
  }
 end
 
@@ -39,17 +39,16 @@ Then(/^I fill in all the fields$/) do
     And I will fill in "Restaurant name" with "Ciao Baby"
     And I will fill in "Restaurant address" with "15 Italy Drive, Milan"
     And I will fill in "Zip code" with "0025 "
-    Then the "Delivery radius" drop-down should contain the option "5"
+    Then the "Delivery radius" drop-down should contain the option "5km"
     And I will fill in "Public phone number" with "555-555555"
     And I will fill in "Owner name" with "Joe Soap"
     And I will fill in "Owner address" with "25 Italy Drive, Milan"
     And I will fill in "Private phone number" with "555-555556"
     And I will fill in "Email address" with "owner@gmail.com"
     And I will fill in "Restaurant description" with "Italian food just like your Mama's"
-    Then the "Cuisine" drop-down should contain the option "Italian"}
+    Then the "Select your cuisine" drop-down should contain the option "Italian"}
 end
 
 Then(/^the "([^"]*)" drop\-down should contain the option "([^"]*)"$/) do |id, value|
-  find('#delivery-radius-id').click
-  select('', from: 'delivery-radius-id' )
+  select(value, from: id)
 end

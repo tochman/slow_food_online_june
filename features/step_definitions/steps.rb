@@ -20,8 +20,8 @@ def path(pagename)
   case pagename
     when "home"
       root_path
-    when "restaurant create"
-      restaurant_create_path
+    when "restaurants"
+      new_restaurant_path
     when "signup"
       new_user_registration_path
   end

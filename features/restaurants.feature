@@ -1,0 +1,34 @@
+Feature: As a System user
+  In order to get clients
+  I want to be able to add my restaurant's information
+
+  Background:
+    Given I am on the "restaurants" page
+    Then I should see an element "#details"
+
+  Scenario: Viewing restaurant create page
+    And I should see all the fields
+    And I should see a "Save" button
+
+  Scenario: Fill in in the form
+    And I fill in all the fields
+    And I click on "Save"
+    Then I should be on the "home" page
+    # this is a temporary path, when the restaurant create page is finished this link will be replaced
+
+  Scenario: Restaurant create page fields not filled in
+    Given I am on the "restaurants" page
+    Then I should see an element "#details"
+    And I will fill in "Restaurant name" with ""
+    And I will fill in "Restaurant address" with ""
+    And I will fill in "Zip code" with ""
+    Then the "Delivery radius" drop-down should contain the option "Select radius"
+    And I will fill in "Public phone number" with ""
+    And I will fill in "Owner name" with ""
+    And I will fill in "Owner address" with ""
+    And I will fill in "Private phone number" with ""
+    And I will fill in "Email address" with ""
+    And I will fill in "Restaurant description" with ""
+    Then the "Select your cuisine" drop-down should contain the option "Select cuisine"
+    And I click on the "Save" button
+    Then show me the page

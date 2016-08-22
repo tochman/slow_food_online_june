@@ -19,14 +19,14 @@ ActiveRecord::Schema.define(version: 20160822154350) do
     t.string   "restaurant_name"
     t.string   "restaurant_address"
     t.string   "zip_code"
-    t.string   "radius_id"
+    t.string   "delivery_radius"
     t.string   "public_phone_number"
     t.string   "owner_name"
     t.string   "owner_address"
     t.string   "private_phone_number"
     t.string   "email_address"
     t.string   "restaurant_description"
-    t.string   "cuisine_id"
+    t.string   "select_your_cuisine"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
