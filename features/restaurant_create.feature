@@ -10,12 +10,12 @@ Feature: As a System user
     And I should see all the fields
     And I should see a "Save" button
 
-
   Scenario: Fill in in the form
     And I fill in all the fields
+    Then show me the page
     And I click on "Save"
     Then I should be on the "home" page
-
+    # this is a temporary path, when the restaurant create page is finished this link will be replaced
 
   Scenario: Restaurant create page fields not filled in
     Given I am on the "restaurant create" page

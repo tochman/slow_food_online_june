@@ -1,33 +1,34 @@
+
 %div#details
-  %form
-    %label{for: 'Restaurant name'} Restaurant name
-    %input{name: 'Restaurant name', placeholder: 'Type in your restaurant name', type: 'text', required: true}
-    %label{for: 'Restaurant address'} Restaurant address
-    %input{name: 'Restaurant address', placeholder: 'Type in your restaurant address', type: 'text', required: true}
-    %label{for: 'Zip code'} Zip code
-    %input{name: 'Zip code', placeholder: 'Type in your Zip code', type: 'text', required: true}
-    %label{for: 'Delivery radius'} Delivery radius
-    %select#Delivery_radius_id{name: 'Delivery radius', required: ""}
-      %option{value: 'Select'}
-      %option{value: '5'} 5 km
-      %option{value: '10'} 10 km
-      %option{value: '20'} 20 km
-      %option{value: '30'} 30 km
-    %label{for: 'Public phone number'} Public phone number
-    %input{name: 'Public phone number', placeholder: 'Type in the public phone number', type: 'text', required: true}
-    %label{for: 'Owner name'} Owner name
-    %input{name: 'Owner name', placeholder: 'Type in your full name', type: 'text', required: true}
-    %label{for: 'Owner address'} Owner address
-    %input{name: 'Owner address', placeholder: 'Type in your full address', type: 'text', required: true}
-    %label{for: 'Private phone number'} Private phone number
-    %input{name: 'Private phone number', placeholder: 'Type in your private phone number', type: 'text', required: true}
-    %label{for: 'Email address'} Email address
-    %input{name: 'Email address', placeholder: 'Type in your email address', type: 'text', required: true}
-    %label{for: 'Restaurant description'} Restaurant description
-    %textarea{cols: '25', name: 'Restaurant description', rows: '10', placeholder: 'Type in a brief description of your Restaurant (eg. Open hours, type of restaurant, delivery fee)', required: true}
-    %label{for: 'Cuisine'} Select your Cuisine
-    %select#Cusine_id{name: 'Cuisine', required: ""}
-      %option{value: 'Select'}
-      %option{value: 'italian'} Italian
-      %option{value: 'greek'} Greek
-    %input{value: 'Save', type: 'submit'}
+  = form_for(@restaurant, html: {method: :post}) do |f|
+    .field
+      = f.label :restaurant_name
+      = f.text_field :restaurant_name
+    .field
+      = f.label :restaurant_address
+      = f.text_field :restaurant_address
+    .field
+      = f.label :zip_code
+      = f.text_field :zip_code
+    %f.select{:radius_id, @radius_options}
+    .field
+      = f.label :public_phone_number
+      = f.text_field :public_phone_number
+    .field
+      = f.label :owner_name
+      = f.text_field :owner_name
+    .field
+      = f.label :owner_address
+      = f.text_field :owner_address
+    .field
+      = f.label :private_phone_number
+      = f.text_field :private_phone_number
+    .field
+      = f.label :email_address
+      = f.text_field :email_address
+    .field
+      = f.label :restaurant_description
+      = f.text_area :restaurant_description
+    %f.select{:cuisine_id, @cuisine_options}
+    .actions
+      = f.submit 'Save'

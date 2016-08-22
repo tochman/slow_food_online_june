@@ -34,7 +34,22 @@ Then(/^I click on the "([^"]*)" button$/) do |button|
   click_link_or_button button
 end
 
+Then(/^I fill in all the fields$/) do
+  steps %q{
+    And I will fill in "Restaurant name" with "Ciao Baby"
+    And I will fill in "Restaurant address" with "15 Italy Drive, Milan"
+    And I will fill in "Zip code" with "0025 "
+    Then the "Delivery radius" drop-down should contain the option "5"
+    And I will fill in "Public phone number" with "555-555555"
+    And I will fill in "Owner name" with "Joe Soap"
+    And I will fill in "Owner address" with "25 Italy Drive, Milan"
+    And I will fill in "Private phone number" with "555-555556"
+    And I will fill in "Email address" with "owner@gmail.com"
+    And I will fill in "Restaurant description" with "Italian food just like your Mama's"
+    Then the "Cuisine" drop-down should contain the option "Italian"}
+end
+
 Then(/^the "([^"]*)" drop\-down should contain the option "([^"]*)"$/) do |id, value|
-  find('#Delivery_radius_id').click
-  select('', from: 'Delivery_radius_id' )
+  find('#delivery-radius-id').click
+  select('', from: 'delivery-radius-id' )
 end
