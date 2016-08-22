@@ -16,3 +16,12 @@ Feature: As a restaurant owner
     And I click on "Sign up"
     Then I should be on the "home" page
     # this is a temporary path, when the restaurant create page is finished this link will be replaced
+
+  Scenario: Trying to sign up with empty fields
+    Given I navigate to the "signup" page
+    And I fill in "Email" with " "
+    And I fill in "Password" with " "
+    And I fill in "Password confirmation" with " "
+    And I click on "Sign up"
+    Then I should see "Email can't be blank"
+    And I should see "Password can't be blank"
