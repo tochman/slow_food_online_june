@@ -2,12 +2,20 @@ Feature: As a System user
   In order to get clients
   I want to be able to add my restaurant's information
 
-  Scenario: Viewing restaurant create page
+  Background:
     Given I am on the "restaurant create" page
-    Then Show me the page
     Then I should see an element "#details"
+
+  Scenario: Viewing restaurant create page
     And I should see all the fields
     And I should see a "Save" button
+
+
+  Scenario: Fill in in the form
+    And I fill in all the fields
+    And I click on "Save"
+    Then I should be on the "home" page
+
 
   Scenario: Restaurant create page fields not filled in
     Given I am on the "restaurant create" page
