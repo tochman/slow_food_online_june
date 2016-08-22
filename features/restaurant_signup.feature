@@ -25,3 +25,11 @@ Feature: As a restaurant owner
     And I click on "Sign up"
     Then I should see "Email can't be blank"
     And I should see "Password can't be blank"
+
+  Scenario: Password and password confirmation
+    Given I navigate to the "signup" page
+    And I fill in "Email" with "admin@admin.com"
+    And I fill in "Password" with "password"
+    And I fill in "Password confirmation" with "wrong_password"
+    And I click on "Sign up"
+    Then I should see "Password confirmation doesn't match Password"
