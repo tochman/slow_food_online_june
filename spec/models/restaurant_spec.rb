@@ -23,4 +23,8 @@ RSpec.describe Restaurant, type: :model do
     it { is_expected. to validate_presence_of :description }
     it { is_expected. to validate_presence_of :cuisine }
   end
+
+  describe 'Relations' do
+    it {is_expected.to belong_to :user}
+  end
 end

@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-
+  before_action :authenticate_user!, only: [:new, :create]
 
   def new
     @restaurant = Restaurant.new
@@ -7,7 +7,7 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
-    #binding.pry
+    @restaurant.user = current_user
     if @restaurant.save
       redirect_to root_path
     else
