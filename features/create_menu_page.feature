@@ -8,3 +8,10 @@ Feature: As a system user
     And I click "Create"
     Then I should be on the "home" page
 
+  Scenario: Reject when missing name value
+    Given I am on the "create menu" page
+    And I fill "Name" with ""
+    And I click "Create"
+    Then I should see "A name is required"
+    And I should be on the "create menu" page
+

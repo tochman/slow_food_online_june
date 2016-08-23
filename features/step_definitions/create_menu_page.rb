@@ -16,6 +16,8 @@ Then(/^I should be on the "([^"]*)" page$/) do |expected_page|
   case expected_page
     when 'home' then
       path = root_path
+    when 'create menu' then
+      path = new_menu_path
   end
   expect(page.current_path).to eq path
 end

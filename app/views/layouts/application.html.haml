@@ -9,5 +9,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = render 'layouts/partials/header'
+    = flash.each do |key, value|
+      = value
     = yield
     = render 'layouts/partials/footer'
