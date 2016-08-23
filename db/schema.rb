@@ -16,19 +16,16 @@ ActiveRecord::Schema.define(version: 20160822154350) do
   enable_extension "plpgsql"
 
   create_table "restaurants", force: :cascade do |t|
-    t.string   "restaurant_name"
-    t.string   "restaurant_address"
+    t.string   "name"
+    t.string   "address"
     t.string   "zip_code"
     t.string   "delivery_radius"
-    t.string   "public_phone_number"
-    t.string   "owner_name"
-    t.string   "owner_address"
-    t.string   "private_phone_number"
+    t.string   "phone_number"
     t.string   "email_address"
-    t.string   "restaurant_description"
-    t.string   "select_your_cuisine"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "description"
+    t.string   "cuisine"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "users", force: :cascade do |t|

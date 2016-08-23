@@ -7,24 +7,22 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
+    #binding.pry
     if @restaurant.save
       redirect_to root_path
     else
-      render "new"
+      render 'new'
     end
   end
 
   def restaurant_params
-    params.require(:restaurant).permit(:restaurant_name,
-                                       :restaurant_address,
+    params.require(:restaurant).permit(:name,
+                                       :address,
                                        :zip_code,
                                        :delivery_radius,
-                                       :public_phone_number,
-                                       :owner_name,
-                                       :owner_address,
-                                       :private_phone_number,
+                                       :phone_number,
                                        :email_address,
-                                       :restaurant_description,
-                                       :select_your_cuisine)
+                                       :description,
+                                       :cuisine)
   end
 end
