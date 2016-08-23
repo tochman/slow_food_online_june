@@ -26,10 +26,6 @@ Then(/^I should see a "([^"]*)" button$/) do |button|
   expect(page).to have_button button
 end
 
-Then(/^I will fill in "([^"]*)" with "([^"]*)"$/) do |field, value|
-  fill_in field, with: value
-end
-
 Then(/^I click on the "([^"]*)" button$/) do |button|
   click_link_or_button button
 end
@@ -51,4 +47,15 @@ end
 
 Then(/^the "([^"]*)" drop\-down should contain the option "([^"]*)"$/) do |id, value|
   select(value, from: id)
+end
+
+
+And(/^I select "([^"]*)" from "([^"]*)"$/) do |option, select_field|
+  select option, from: select_field
+end
+
+Then(/^I should see:$/) do |table|
+  table.hashes.each do |hash|
+    expect(page).to have_content hash[:message]
+  end
 end
