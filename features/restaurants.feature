@@ -14,7 +14,6 @@ Feature: As a System user
     And I fill in all the fields
     And I click on "Save"
     Then I should be on the "home" page
-    # this is a temporary path, when the restaurant create page is finished this link will be replaced
 
   Scenario: Restaurant create page fields not filled in
     Given I am on the "restaurants" page
@@ -31,4 +30,3 @@ Feature: As a System user
     And I will fill in "Restaurant description" with ""
     Then the "Select your cuisine" drop-down should contain the option "Select cuisine"
     And I click on the "Save" button
-    Then show me the page
