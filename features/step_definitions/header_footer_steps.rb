@@ -3,7 +3,7 @@ Given(/^I am on the "([^"]*)" page$/) do |path|
     when 'home' then
       visit root_path
     when 'create menu' then
-      visit new_create_menu_path
+      visit new_menu_path
   end
 end
 

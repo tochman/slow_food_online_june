@@ -1,8 +1,10 @@
-Feature: Menu create page
+Feature: As a system user
+  In order to display dishes to customers
+  I need to be able to create a menu
 
-  Scenario: Create menu page
-    # Given I am logged in as System user
+  Scenario: Create a menu
     Given I am on the "create menu" page
-    Then I should see "Create your custom menu!"
-    And I should see the input field "Name"
-    And I should see the "Continue" button
+    And I fill "Name" with "Lunch menu"
+    And I click "Create"
+    Then I should be on the "dish_create_path" path
+
