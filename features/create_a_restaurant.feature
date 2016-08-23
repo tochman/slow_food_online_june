@@ -3,6 +3,7 @@ Feature: As a System user
   I want to be able to add my restaurant's information
 
   Background:
+    Given I am logged in as a user of the system
     Given I am on the "restaurants" page
 
   Scenario: Successfully create a restaurant
