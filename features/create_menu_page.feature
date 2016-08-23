@@ -6,5 +6,5 @@ Feature: As a system user
     Given I am on the "create menu" page
     And I fill "Name" with "Lunch menu"
     And I click "Create"
-    Then I should be on the "dish_create_path" path
+    Then I should be on the "home" page
 
