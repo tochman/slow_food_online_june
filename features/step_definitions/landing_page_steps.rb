@@ -7,7 +7,7 @@ Then(/^I should see an element "([^"]*)"$/) do |selector|
 end
 
 
-And(/^I should see a Google Map$/) do
+And(/^I see a Google Map$/) do
   loop until all(:css, '#map .gm-style').length == 1
   expect(page).to have_css '.gm-style'
 end

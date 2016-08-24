@@ -5,4 +5,24 @@ function initMap () {
         lat: 57.7089,
         lng: 11.9746
     })
+    getUserLocation();
+};
+
+function getUserLocation () {
+  var environment = $('#map').data('test-env')
+  if (environment == false) {
+    GMaps.geolocate({
+      success: function(position) {
+        map.setCenter(position.coords.latitude, position.coords.longitude);
+      },
+      error: function(error) {
+        alert('Geolocation failed: '+error.message);
+      },
+      not_supported: function() {
+        alert("Your browser does not support geolocation");
+      }
+    });
+  } else {
+    map.setCenter(57.7089, 11.9746);
+  };
 };

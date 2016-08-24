@@ -10,4 +10,4 @@ Feature: As a visitor
     And I should see an element "#map"
     And I should see "Asian"
     And I should see an element "#location_form"
-    And I should see a Google Map
+    And I see a Google Map

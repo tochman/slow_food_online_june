@@ -10,7 +10,7 @@
     %input{type: "submit", value: "Submit"}
   %br
 %div{style: 'width: 800px'}
-  #map{style: 'width: 800px; height: 400px; background-color: green;'}
+  #map{data: {test: {env: "#{Rails.env.test?}"}}, style: 'width: 800px; height: 400px; background-color: green;'}
     %h2 Map
 %h2
   List of restaurants
