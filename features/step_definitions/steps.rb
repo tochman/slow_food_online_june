@@ -30,6 +30,7 @@ def path(pagename)
       new_restaurant_path
     when 'signup'
       new_user_registration_path
+    when 'create menu'
+      new_menu_path
   end
 end
-
