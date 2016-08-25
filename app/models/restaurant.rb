@@ -15,7 +15,7 @@ class Restaurant < ApplicationRecord
 
 
 
-  after_validation :geocode
+  after_save :geocode
 
   def full_address
     [self.address, self.zip_code, self.city].join(', ')

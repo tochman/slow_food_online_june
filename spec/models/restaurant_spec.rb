@@ -44,11 +44,11 @@ RSpec.describe Restaurant, type: :model do
       expect(subject.full_address).to eq expected_string
     end
 
-    it 'sets latitude' do
+    it 'sets latitude after save' do
       expect(subject.latitude).to eq 57.6914445
     end
 
-    it 'sets longitude' do
+    it 'sets longitude after save' do
       expect(subject.longitude).to eq 11.9731215
     end
   end
