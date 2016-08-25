@@ -27,6 +27,29 @@ RSpec.describe Restaurant, type: :model do
   end
 
   describe 'Relations' do
-    it {is_expected.to belong_to :user}
+    it { is_expected.to belong_to :user }
+  end
+
+  describe 'Geocoder methods' do
+    subject { FactoryGirl.create(:restaurant,
+                                 address: 'Holtermansgatan 10',
+                                 zip_code: '411 29',
+                                 city: 'Gothenburg') }
+
+    it { is_expected.to respond_to :full_address }
+    it { is_expected.to respond_to :geocode }
+
+    it '#full_address returns formatted string' do
+      expected_string = 'Holtermansgatan 10, 411 29, Gothenburg'
+      expect(subject.full_address).to eq expected_string
+    end
+
+    it 'sets latitude' do
+      expect(subject.latitude).to eq 57.6914445
+    end
+
+    it 'sets longitude' do
+      expect(subject.longitude).to eq 11.9731215
+    end
   end
 end

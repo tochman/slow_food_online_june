@@ -1,6 +1,8 @@
 class Restaurant < ApplicationRecord
 
   belongs_to :user
+  geocoded_by :full_address
+
   validates_presence_of :name,
                         :address,
                         :zip_code,
@@ -10,5 +12,13 @@ class Restaurant < ApplicationRecord
                         :email_address,
                         :description,
                         :cuisine
+
+
+
+  after_validation :geocode
+
+  def full_address
+    [self.address, self.zip_code, self.city].join(', ')
+  end
 
 end
