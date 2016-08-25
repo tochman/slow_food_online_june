@@ -1,6 +1,7 @@
 require 'coveralls'
 Coveralls.wear_merged!('rails')
 
+require Rails.root.join('spec/fixtures/geocoder')
 require 'cucumber/rails'
 require 'capybara/poltergeist'
 
