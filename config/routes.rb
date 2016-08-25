@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :restaurants, only: [:new, :create]
   root controller: :landing, action: :index
   resources :menus, only: [:new, :create]
+  resources :dishes, only: [:new, :create]
 end

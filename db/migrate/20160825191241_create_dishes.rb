@@ -6,7 +6,6 @@ class CreateDishes < ActiveRecord::Migration
       t.string :allergy_info
       t.string :ingredients
       t.integer :calories
-      t.string :img_url
 
       t.timestamps null: false
     end

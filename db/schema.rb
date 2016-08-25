@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20160825191241) do
     t.string   "allergy_info"
     t.string   "ingredients"
     t.integer  "calories"
-    t.string   "img_url"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
