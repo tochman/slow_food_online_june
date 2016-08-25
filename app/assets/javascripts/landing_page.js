@@ -1,17 +1,18 @@
 function initMap() {
+    //var map;
     map = GMaps({
         div: '#map',
         zoom: 12,
         lat: 57.7089,
         lng: 11.9746
     });
-    getUserLocation(map);
+    getUserLocation();
 }
 
-function getUserLocation(map) {
-    var map = map;
+function getUserLocation() {
     var environment = $('#map').data('test-env');
     if (environment == false) {
+        debugger;
         GMaps.geolocate({
             success: function (position) {
                 map.setCenter(position.coords.latitude, position.coords.longitude);
@@ -24,6 +25,6 @@ function getUserLocation(map) {
             }
         });
     } else {
-        map.setCenter(57.7089, 11.9746);
+        map.setCenter(57.7089, 11.98);
     }
 }
