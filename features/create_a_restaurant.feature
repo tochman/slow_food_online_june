@@ -8,8 +8,9 @@ Feature: As a System user
 
   Scenario: Successfully create a restaurant
     And I fill in "Name" with "My Restaurant"
-    And I fill in "Address" with "Main Stree 1"
-    And I fill in "Zip code" with "90210"
+    And I fill in "Address" with "Holtermansgatan 10"
+    And I fill in "Zip code" with "411 29"
+    And I fill in "City" with "Gothenburg"
     And I select "5km" from "Delivery radius"
     And I fill in "Phone number" with "031-123456"
     And I fill in "Email address" with "restaurant@random.com"
@@ -24,6 +25,7 @@ Feature: As a System user
     And I fill in "Name" with ""
     And I fill in "Address" with ""
     And I fill in "Zip code" with ""
+    And I fill in "City" with ""
     And I select "5km" from "Delivery radius"
     And I fill in "Phone number" with ""
     And I fill in "Email address" with ""
@@ -35,6 +37,7 @@ Feature: As a System user
       | Name can't be blank          |
       | Address can't be blank       |
       | Zip code can't be blank      |
+      | City can't be blank          |
       | Phone number can't be blank  |
       | Email address can't be blank |
       | Description can't be blank   |
