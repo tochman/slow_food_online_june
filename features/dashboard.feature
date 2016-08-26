@@ -1,3 +1,4 @@
+@javascript
 Feature: As a system user
   So that I can manage my restaurant
   I want to be able to access a restaurant dashboard
@@ -12,6 +13,6 @@ Feature: As a system user
     And I click "Dashboard"
     Then I should be on the "dashboard" page for "Mikey's"
     Then I should see "Hello admin@random.com"
-  Then show me the page
+    Then show me an image of the page
     #And I click on "Create a menu"
     #Then I should be on the "create menu" page

@@ -3,6 +3,7 @@ Coveralls.wear_merged!('rails')
 
 require 'cucumber/rails'
 require 'capybara/poltergeist'
+require 'capybara-screenshot/cucumber'
 
 require_relative '../../spec/fixtures/geocoder'
 
