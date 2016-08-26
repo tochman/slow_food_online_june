@@ -1,4 +1,5 @@
 class Restaurant < ApplicationRecord
+  include ActiveModel::Validations
 
   belongs_to :user
   geocoded_by :full_address
