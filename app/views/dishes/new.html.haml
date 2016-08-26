@@ -1,4 +1,4 @@
-= form_for @dish do |f|
+= form_for ([@menu, @dish]) do |f|
   .field
     = f.label :name
     = f.text_field :name

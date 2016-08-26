@@ -5,3 +5,9 @@ Given(/^I only fill in the optional fields$/) do
   And I fill "Calories" with "429"
   }
 end
+
+
+And(/^I am on the create dish page for menu "([^"]*)"$/) do |name|
+  @menu = Menu.find_by(name: name)
+  visit new_menu_dish_path(@menu)
+end

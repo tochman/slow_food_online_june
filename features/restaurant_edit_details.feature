@@ -5,8 +5,8 @@ Feature: As a system user
   Background:
     Given I am logged in as a user of the system
     And the following restaurant exists
-    | name    |
-    | Mikey's |
+      | name    |
+      | Mikey's |
 
     And I am on the "edit" page for "Mikey's"
 
