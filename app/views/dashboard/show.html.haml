@@ -3,3 +3,12 @@
   = @restaurant.name
 %p Hello
 = current_user.email
+
+%div#dash_links
+  %ul
+    %li
+      = button_to 'Create a menu', new_menu_path, method: 'get'
+    %li
+      = button_to 'Edit details', edit_restaurant_path(@restaurant), method: 'get'
+    -# %li
+    -#   = button_to 'Create a dish', new_menu_dish_path(@menu), method: 'get'
