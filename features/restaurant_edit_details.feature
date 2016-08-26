@@ -11,7 +11,7 @@ Feature: As a system user
     And I am on the "edit" page for "Mikey's"
 
   Scenario: Updating the address
-    And I fill in "Address" with "Main Street 224"
+    And I fill in "Address" with "Holtermansgatan 10"
     And I select "5km" from "Delivery radius"
     And I select "Italian" from "Select your cuisine"
     And I click on the "Save" button

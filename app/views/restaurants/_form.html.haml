@@ -9,6 +9,9 @@
     = f.label :zip_code
     = f.text_field :zip_code
   .field
+    = f.label :city
+    = f.text_field :city
+  .field
     = f.label :delivery_radius
     = f.select(:delivery_radius, options_for_select([['5km', 1], ['10km', 2],['20km', 3],['30km', 4]]), include_blank: 'Select radius')
   .field

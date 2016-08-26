@@ -35,6 +35,7 @@ class RestaurantsController < ApplicationController
     params.require(:restaurant).permit(:name,
                                        :address,
                                        :zip_code,
+                                       :city,
                                        :delivery_radius,
                                        :phone_number,
                                        :email_address,

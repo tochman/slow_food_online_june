@@ -4,6 +4,8 @@ Coveralls.wear_merged!('rails')
 require 'cucumber/rails'
 require 'capybara/poltergeist'
 
+require_relative '../../spec/fixtures/geocoder'
+
 ActionController::Base.allow_rescue = false
 
 Capybara.register_driver :poltergeist do |app|
