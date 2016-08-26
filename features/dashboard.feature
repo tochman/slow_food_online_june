@@ -10,6 +10,8 @@ Feature: As a system user
   Scenario: Access the dashboard
     Given I am on the "home" page
     And I click "Dashboard"
-    Then I should be on the "dashboard" page
-    # And I click 'Create a menu'
-    # Then I should be on the 'create menu' page
+    Then I should be on the "dashboard" page for "Mikey's"
+    Then I should see "Hello admin@random.com"
+  Then show me the page
+    #And I click on "Create a menu"
+    #Then I should be on the "create menu" page
