@@ -24,4 +24,9 @@ Feature: As a system user
     And I click on "Add dish to Lunch"
     Then I should be on the "create dish" page
 
+  Scenario: Restrict access to logged in users
+    Given I am logged out
+    And I am on the "dashboard" page for "Mikey's"
+    Then I should see "You need to sign in or sign up before continuing"
+
 
