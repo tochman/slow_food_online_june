@@ -11,6 +11,7 @@ Feature: As a system user
     And I fill "Calories" with "429"
     And I click "Create"
     Then I should be on the "home" page
+    And I should see "Dish Name created successfully"
 
   Scenario: Reject when missing required values
     Given I am on the "create dish" page
