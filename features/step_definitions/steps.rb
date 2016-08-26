@@ -16,8 +16,8 @@ end
 
 
 Given(/^I am logged in as a user of the system$/) do
-  user = FactoryGirl.create(:user)
-  login_as user
+  @user = FactoryGirl.create(:user)
+  login_as @user
 end
 
 private
@@ -34,6 +34,8 @@ def path(pagename)
       new_menu_path
     when 'create dish'
       new_dish_path
+    when 'dashboard'
+      dashboard_path
     else
       raise 'You have not defined a path yet'
   end
