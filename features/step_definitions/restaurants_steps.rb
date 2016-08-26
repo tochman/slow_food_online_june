@@ -58,5 +58,7 @@ Then(/^I should see:$/) do |table|
 end
 
 Given(/^I have a restaurant called "([^"]*)"$/) do |name|
-  FactoryGirl.create(:restaurant, name: name, user: @user)
+  @restaurant = FactoryGirl.create(:restaurant, name: name, user: @user)
 end
+
+

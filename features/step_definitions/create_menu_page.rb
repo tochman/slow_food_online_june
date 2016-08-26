@@ -19,7 +19,7 @@ Then(/^I should be on the "([^"]*)" page$/) do |expected_page|
     when 'create dish' then
       path = new_menu_dish_path(@menu)
     when 'dashboard'
-      path = dashboard_path
+      path = dashboard_path(@restaurant)
     else
       raise 'You have not defined a path yet'
   end
