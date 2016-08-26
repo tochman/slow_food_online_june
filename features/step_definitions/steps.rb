@@ -40,7 +40,7 @@ def path(pagename)
     when 'create dish'
       new_dish_path
     when 'dashboard'
-      dashboard_path
+      dashboard_path(@restaurant)
     else
       raise 'You have not defined a path yet'
   end
