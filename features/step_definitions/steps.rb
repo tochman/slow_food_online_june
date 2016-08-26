@@ -32,5 +32,7 @@ def path(pagename)
       new_user_registration_path
     when 'create menu'
       new_menu_path
+    when 'create dish'
+      new_dish_path
   end
 end

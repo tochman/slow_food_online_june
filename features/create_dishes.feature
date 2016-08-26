@@ -3,8 +3,7 @@ Feature: As a system user
   I want to be able to create dishes
 
   Scenario: Create a list of dishes offered
-    Given I am on the "create dishes" page
-    And show me the page
+    Given I am on the "create dish" page
     And I fill "Name" with "Dish Name"
     And I fill "Price" with "3.00"
     And I fill "Allergy Information" with "Peanuts"
