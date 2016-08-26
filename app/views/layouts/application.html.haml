@@ -7,12 +7,14 @@
     %title Slow Food Online
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+
 
   %body
     = render 'layouts/partials/header'
     - if flash.any?
       = flash.each do |key, value|
         = value
-    = yield
+    .row
+      = yield
     = render 'layouts/partials/footer'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
