@@ -56,3 +56,7 @@ Then(/^I should see:$/) do |table|
     expect(page).to have_content hash[:message]
   end
 end
+
+Given(/^I have a restaurant called "([^"]*)"$/) do |name|
+  FactoryGirl.create(:restaurant, name: name, user: @user)
+end
