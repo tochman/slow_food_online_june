@@ -45,3 +45,8 @@ def path(pagename)
       raise 'You have not defined a path yet'
   end
 end
+
+
+Given(/^I am logged out$/) do
+  logout
+end
