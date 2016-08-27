@@ -17,12 +17,26 @@ Then(/^I should be on the "([^"]*)" page$/) do |expected_page|
     when 'restaurants' then
       path = new_restaurant_path
 <<<<<<< HEAD
+<<<<<<< HEAD
     when 'create dish' then
       path = new_dish_path
 =======
     else
       raise 'You have not defined a path yet'
 >>>>>>> 013f8711f26c35868dd10648b375a46674adcabb
+=======
+    when 'create dish' then
+      path = new_menu_dish_path(@menu)
+    else
+      raise 'You have not defined a path yet'
+>>>>>>> 1cd77e256a9aac9b8d57f901fcec734b334acb9b
   end
   expect(page.current_path).to eq path
+end
+
+
+Given(/^that following menus exist$/) do |table|
+  table.hashes.each do |menu|
+    FactoryGirl.create(:menu, menu)
+  end
 end
