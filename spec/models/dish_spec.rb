@@ -27,6 +27,11 @@ RSpec.describe Dish, type: :model do
     it { is_expected.to validate_presence_of :name}
     it { is_expected.to validate_presence_of :price}
     it { is_expected.to validate_presence_of :category}
+
+    it 'rejects custom categories' do
+      record = FactoryGirl.build(:dish, category: 'Custom category')
+      expect(record.save).to be_falsey
+    end
   end
 
 end
