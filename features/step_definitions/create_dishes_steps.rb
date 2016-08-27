@@ -6,7 +6,6 @@ Given(/^I only fill in the optional fields$/) do
   }
 end
 
-
 And(/^I am on the create dish page for menu "([^"]*)"$/) do |name|
   @menu = Menu.find_by(name: name)
   visit new_menu_dish_path(@menu)

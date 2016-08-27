@@ -23,7 +23,8 @@ class DishesController < ApplicationController
                                  :price,
                                  :allergy_info,
                                  :ingredients,
-                                 :calories)
+                                 :calories,
+                                 :category)
   end
 
 
