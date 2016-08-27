@@ -15,6 +15,7 @@ RSpec.describe Dish, type: :model do
     it { is_expected.to have_db_column :allergy_info }
     it { is_expected.to have_db_column :ingredients }
     it { is_expected.to have_db_column :calories }
+    it { is_expected.to have_db_column :category }
   end
 
   describe 'Relationsships' do
@@ -25,6 +26,7 @@ RSpec.describe Dish, type: :model do
     it { is_expected.to validate_presence_of :menu}
     it { is_expected.to validate_presence_of :name}
     it { is_expected.to validate_presence_of :price}
+    it { is_expected.to validate_presence_of :category}
   end
 
 end

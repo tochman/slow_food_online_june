@@ -5,6 +5,7 @@ FactoryGirl.define do
     allergy_info 'Onion'
     ingredients 'Meat'
     calories '500'
+    category 'Starter'
     association :menu
   end
 end

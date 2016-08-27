@@ -1,9 +1,7 @@
 = form_for ([@menu, @dish]) do |f|
   .field
     = f.label :category, 'Select the category for your dish'
-    = f.select(:category, options_for_select([['Starter', 'Starter'],
-                                              ['Main Course', 'Main Course'],
-                                              ['Dessert', 'Dessert']]),
+    = f.select(:category, options_for_select(Dish::CATEGORIES),
                                               include_blank: 'Select category')
   .field
     = f.label :name
