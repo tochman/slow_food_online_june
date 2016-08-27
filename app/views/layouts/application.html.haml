@@ -10,6 +10,7 @@
 
 
   %body
+    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
     = render 'layouts/partials/header'
     - if flash.any?
       = flash.each do |key, value|
@@ -17,4 +18,3 @@
     .wrapper.row
       = yield
     = render 'layouts/partials/footer'
-    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
