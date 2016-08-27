@@ -22,4 +22,5 @@ Feature: As a system user
     And I only fill in the optional fields
     And I click "Create"
     Then I should be on the "create dish" page
-    And I should see "A name is required"
+    And I should see "Name can't be blank"
+    And I should see "Price can't be blank"

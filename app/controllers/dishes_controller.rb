@@ -11,7 +11,7 @@ class DishesController < ApplicationController
       flash[:notice] = "#{@dish.name} created successfully"
       redirect_to root_path
     else
-      flash[:error] = 'A name is required'
+      set_flash_message(@dish)
       redirect_to new_menu_dish_path(@menu)
     end
   end
