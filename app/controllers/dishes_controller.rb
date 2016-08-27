@@ -16,6 +16,11 @@ class DishesController < ApplicationController
     end
   end
 
+  def show
+    @menu = Menu.find(params[:menu_id])
+    @dish = @menu.dishes.find_by(id: params[:id])
+  end
+
   private
 
   def dish_params

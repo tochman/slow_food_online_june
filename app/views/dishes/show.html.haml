@@ -1,0 +1,17 @@
+.row
+  .large-12.columns
+    %p
+      %small
+        = @menu.name
+    %h3
+      = @dish.name
+.row
+  .large-3.columns
+    %p.eft
+      Price:
+      = @dish.price
+      kr
+    %p
+      = link_to 'Order', '#', class: 'button expanded'
+  .large-9.columns
+    %p Lorem Ipsum...
