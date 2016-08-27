@@ -2,8 +2,13 @@ Feature: As a system user
   So that I can fill my menu with dishes
   I want to be able to create dishes
 
+  Background:
+    Given that following menus exist
+      | name  |
+      | lunch |
+    And I am on the create dish page for menu "lunch"
+
   Scenario: Create a dish
-    Given I am on the "create dish" page
     And I fill "Name" with "Dish Name"
     And I fill "Price" with "3.00"
     And I fill "Allergy info" with "Peanuts"
@@ -11,10 +16,11 @@ Feature: As a system user
     And I fill "Calories" with "429"
     And I click "Create"
     Then I should be on the "home" page
+    And I should see "Dish Name created successfully"
 
   Scenario: Reject when missing required values
-    Given I am on the "create dish" page
     And I only fill in the optional fields
     And I click "Create"
     Then I should be on the "create dish" page
-    And I should see "A name is required"
+    And I should see "Name can't be blank"
+    And I should see "Price can't be blank"
