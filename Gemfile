@@ -25,6 +25,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'capybara-webkit'
+  gem 'capybara-screenshot'
   gem 'launchy'
   gem 'poltergeist'
 end
