@@ -14,11 +14,12 @@ Feature: As a System user
       | lunch |
 
     And that following dishes for "lunch" exist
-      | name        | price | calories | ingredients            | allergy_info    |
-      | Capricciosa | 50    |          |                        |                 |
-      | Margharita  | 50    | 1000     |                        |                 |
-      | Bolognese   | 50    | 1000     | Tomato,Cheese, Sausage |                 |
-      | Vesuvio     | 50    | 1000     | Tomato, Cheese, Ham    | Gluten, Lactose |
+      | name        | price | calories | ingredients                      | allergy_info    | description                             |
+      | Capricciosa | 50    |          |                                  |                 | Delicious pizza...                      |
+      | Margharita  | 50    | 1000     |                                  |                 | Delicious pizza...                      |
+      | Bolognese   | 50    | 1000     | Tomato,Cheese, Sausage           |                 | Delicious pizza...                      |
+      | Vesuvio     | 50    | 1000     | Tomato, Cheese, Ham              | Gluten, Lactose | Delicious pizza...                      |
+      | Marinara    | 60    | 1000     | Tomato, Cheese, Shrimps, Mussels | Gluten, Lactose | Delicious pizza with fruits of the sea! |
 
   Scenario: Display dish info about Capricciosa
     Given I am on the "show" page for dish: "Capricciosa"
@@ -45,4 +46,13 @@ Feature: As a System user
     And I should see "Calories: 1000 Kcal"
     And I should see "Ingredients: Tomato, Cheese, Ham"
     And I should see "Allergy info: Gluten, Lactose"
+
+  Scenario: Display dish info about Marinara
+    Given I am on the "show" page for dish: "Marinara"
+    Then I should see "Marinara"
+    And I should see "Price: 60.0 kr"
+    And I should see "Calories: 1000 Kcal"
+    And I should see "Ingredients: Tomato, Cheese, Shrimps, Mussels"
+    And I should see "Allergy info: Gluten, Lactose"
+    And I should see "Delicious pizza with fruits of the sea!"
 
