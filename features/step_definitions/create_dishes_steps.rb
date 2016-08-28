@@ -14,13 +14,15 @@ end
 
 And(/^that following dishes for "([^"]*)" exist$/) do |name, table|
   @menu = Menu.find_by(name: name)
+  @menu.dishes.each {|d| d.destroy}
+  
   table.hashes.each do |dish|
     FactoryGirl.create(:dish, dish.merge!(menu: @menu))
   end
 end
 
 Given(/^I am on the "([^"]*)" page for dish: "([^"]*)"$/) do |page, name|
-  @dish = Dish.find_by(name: name)
+  @dish = Dish.find_by(name: name, menu: @menu)
   case page
     when 'show'
       visit menu_dish_path(@menu, @dish)
