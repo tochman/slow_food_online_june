@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root controller: :landing, action: :index
   resources :dashboard, only: [:show]
   resources :menus, only: [:new, :create] do
-    resources :dishes, only: [:new, :create]
+    resources :dishes, only: [:new, :create, :show]
   end
 
 end

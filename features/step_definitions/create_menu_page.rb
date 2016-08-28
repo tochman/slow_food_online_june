@@ -38,3 +38,12 @@ Given(/^that following menus exist$/) do |table|
     end
   end
 end
+
+
+And(/^that following menus for "([^"]*)" exist$/) do |name, table|
+  @restaurant = Restaurant.find_by(name: name)
+  table.hashes.each do |menu|
+    #FactoryGirl.create(:menu, menu.merge!(restaurant: @restaurant))
+    FactoryGirl.create(:menu, menu)
+  end
+end
