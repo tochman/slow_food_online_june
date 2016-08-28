@@ -65,7 +65,6 @@ puts '     Alright, Here we go!'.yellow
 puts '**************************************'.green
 puts ''
 
-binding.pry
 if should_prompt
   if yes_no('Would you like to ' + 'delete'.red + ' all the existing data from the database?')
     puts 'Clearing existing data'.red
