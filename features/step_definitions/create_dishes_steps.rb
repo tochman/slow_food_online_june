@@ -15,7 +15,7 @@ end
 And(/^that following dishes for "([^"]*)" exist$/) do |name, table|
   @menu = Menu.find_by(name: name)
   @menu.dishes.each {|d| d.destroy}
-  
+
   table.hashes.each do |dish|
     FactoryGirl.create(:dish, dish.merge!(menu: @menu))
   end
@@ -30,5 +30,5 @@ Given(/^I am on the "([^"]*)" page for dish: "([^"]*)"$/) do |page, name|
 end
 
 And(/^I add a dish image$/) do
-  attach_file('image', File.join(Rails.root, '/spec/fixtures/pizza-300x300.jpg'))
+  attach_file('dish_image', File.join(Rails.root, '/spec/fixtures/pizza-300x300.jpg'))
 end

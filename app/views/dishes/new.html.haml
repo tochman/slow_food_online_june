@@ -1,4 +1,4 @@
-= form_for ([@menu, @dish]) do |f|
+= form_for [@menu, @dish], html: { multipart: true } do |f|
   .field
     = f.label :category, 'Select the category for your dish'
     = f.select(:category, options_for_select(Dish::CATEGORIES),
@@ -21,7 +21,10 @@
   .field
     = f.label :calories
     = f.number_field :calories
+  .field
+    = f.label :image
+    = image_tag(@dish.image_url) if @dish.image?
+    = f.file_field :image
+    = f.hidden_field :image_cache
   .actions
     = f.submit 'Create'
-
-
