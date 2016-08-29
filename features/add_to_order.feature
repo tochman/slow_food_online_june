@@ -4,7 +4,9 @@ Feature: As a System user
 
 
   Background:
-    Given the following restaurant exists
+    Given I am logged in as a user of the system
+
+    And the following restaurant exists
       | name       |
       | Salvatores |
 
