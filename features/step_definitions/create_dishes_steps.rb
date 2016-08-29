@@ -28,3 +28,7 @@ Given(/^I am on the "([^"]*)" page for dish: "([^"]*)"$/) do |page, name|
       visit menu_dish_path(@menu, @dish)
   end
 end
+
+And(/^I add a dish image$/) do
+  attach_file('image', File.join(Rails.root, '/spec/fixtures/pizza-300x300.jpg'))
+end

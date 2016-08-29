@@ -14,6 +14,7 @@ gem 'devise'
 gem 'geocoder'
 gem 'colored' #colors in terminal Used in seeds.rb
 gem 'faker'
+gem 'carrierwave'
 
 group :development, :test do
   gem 'pry'
