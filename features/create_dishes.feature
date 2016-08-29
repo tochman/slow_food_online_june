@@ -18,10 +18,9 @@ Feature: As a system user
     And I fill "Ingredients" with "Mince"
     And I fill "Calories" with "429"
     And I select "Starter" from "Select the category for your dish"
-    Then show me an image of the page
-    Then show me the page
     And I click "Create"
     Then I should be on the "home" page
+
     And I should see "Dish Name created successfully"
 
   Scenario: Reject when missing required values

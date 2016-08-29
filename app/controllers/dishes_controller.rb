@@ -7,7 +7,6 @@ class DishesController < ApplicationController
   def create
     @menu = Menu.find(params[:menu_id])
     @dish = @menu.dishes.build(dish_params)
-    binding.pry
     if @dish.save
       flash[:notice] = "#{@dish.name} created successfully"
       redirect_to root_path
@@ -31,7 +30,8 @@ class DishesController < ApplicationController
                                  :ingredients,
                                  :calories,
                                  :category,
-                                 :description)
+                                 :description,
+                                 :image)
   end
 
 
